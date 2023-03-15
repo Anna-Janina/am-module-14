@@ -23,10 +23,46 @@ router.post('/', async (req, res) => {
 
 // user can login
 router.post('/login', async (req, res) => {
-// login code
-})
-// logout write node function ////////////////
+    try {
+      const { username, password } = req.body;
+  
+      const user = await User.findOne({ where: { username } });
+  
+      if (!user) {
+        res.status(400).json({ message: 'Invalid username or password' });
+        return;
+      }
+  
+      const isValidPassword = await bcrypt.compare(password, user.password);
+  
+      if (!isValidPassword) {
+        res.status(400).json({ message: 'Invalid username or password' });
+        return;
+      }
+  
+      req.session.save(() => {
+        req.session.userId = user.id,
+        req.session.username = user.username,
+        req.session.loggedIn = true;
+  
+        res.json(user);
+      });
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  });
+  
+// logout route
 router.post('/logout', (req, res) => {
-    // logout code
-})
+    req.session.destroy((err) => {
+      if (err) {
+        res.status(500).json(err);
+        return;
+      }
+      res.clearCookie('sid');
+      res.json({ message: 'Successfully logged out' });
+    });
+  });
+  
+
 module.exports = router;
