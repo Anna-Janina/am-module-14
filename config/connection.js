@@ -8,10 +8,10 @@ const sequelize = new Sequelize(
   process.env.DB_USER,
   process.env.DB_PASSWORD,
   {
-    host: 'us-cdbr-east-06.cleardb.net', //heroku server name
+    host: 'localhost', // deploy to heroku later on
     dialect: 'mysql',
     port: 3306,
   }
 );
 
-module.exports = sequelize; //Exporting sequelize connection
+module.exports = sequelize; 
