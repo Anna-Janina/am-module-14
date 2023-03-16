@@ -1,6 +1,14 @@
 body {
-    background-color: rgb(135, 50, 119);
+    background-color: rgb(147, 12, 122);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 20px;
 }   
+
+.bg-pink {
+    background-color: rgb(135, 50, 119);
+}
+
+.bg-peach {
+    background-color: rgb(246, 197, 173);
+}
