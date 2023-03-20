@@ -27,16 +27,20 @@ Post.init(
         userId: {
             type: DataTypes.STRING,
             references: {
-                model: 'user',
+                model: 'User',
                 key: 'id'
             }
+        },
+        date: {
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
         }
     }, 
     {
         sequelize,
         freezeTableName: true,
         underscored: true, 
-        modelName: 'User'
+        modelName: 'post'
     }
     );
 
