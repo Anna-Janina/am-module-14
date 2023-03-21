@@ -3,23 +3,18 @@ const sequelize = require('../config/connection');
 
 const seedUser = [
     {
-        "name": "",
-        "email": "",
-        "password": ""
+        "name": "Hermine Granger",
+        "email": "hermine_granger@gmail.com",
+        "password": "herminePotter123"
     },
     {
-        "name": "",
-        "email": "",
-        "password": ""
+        "name": "Harry Potter",
+        "email": "harry_potter@gmail.com",
+        "password": "harryPotter875"
     },
     {
-        "name": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "name": "",
-        "email": "",
-        "password": ""
+        "name": "Ronald Weasley", 
+        "email": "ronald_weasley@gmail.com",
+        "password": "ronald_weasley634"
     },
 ]
