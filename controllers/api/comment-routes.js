@@ -1,11 +1,11 @@
 const router = require('express').Router()
 const { Comment } = require('../../models')
-// TODO: include auth middleware
+const withAuth = require('../../utils/auth');
 
-// TODO add this line in when auth middleware is in
+
 
 // router.post('/', withAuth, async(req, res) => {
-router.post('/', async(req, res) => {
+router.post('/', withAuth, async(req, res) => {
     try {
         const newComment = await Comment.create({
             ...req.body,
