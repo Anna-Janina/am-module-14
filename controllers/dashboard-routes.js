@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Comments, Post, User } = require('../models');
 const sequelize = require('../config/connection');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../utils/auth');
 
 
 // get single post form

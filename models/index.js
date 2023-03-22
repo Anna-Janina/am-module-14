@@ -1,7 +1,7 @@
 const Comments = require('../models/Comment');
 const Posts = require('../models/Post');
 const User = require('../models/User');
-const sequelize = require('../config/connection');
+// const sequelize = require('../config/connection');
 
 Comments.belongsTo(Posts, {
     foreignKey: 'postId',
@@ -34,11 +34,3 @@ User.hasMany(Posts, {
 
 module.exports = { Comments, Posts, User };
 
-
-
-
-
-
-
-
-module.exports = { Comments, Posts, User };
