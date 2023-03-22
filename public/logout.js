@@ -12,3 +12,5 @@ const logout = async function() {
 }
 
 document.querySelector('#logout').onclick(logout)
+
+

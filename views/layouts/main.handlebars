@@ -13,22 +13,33 @@
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
+    {{!-- Nav bar --}}
     <nav>
       <ul>
+        <h1>
+          <a href="/">The Tech Blog</a>
+        </h1>
         <li><a href="/">Home</a></li>
-        <li><a href="/dashboard">dashboard</a></li>
-        <li><a href="/login">login</a></li>
-        <li><a href="#" id="logout"></a></li>
-      </ul>
+        <li><a href="/dashboard">Dashboard</a></li>
+        {{#if loggedin}}
+        <li><a href="/logout" id="logout"></a></li>
+        {{else}}
+
+        <li><a href="/login" id="'login">login</a></li>
+        <li><a href="/signup" id="signup"></a></li>
+       </ul>
     </nav>
+
     <main>
+
       {{{body}}}
+
     </main>
 
   </body>
 
-  // ask Blake
-
-  <script src="/"></script>
+  
+  {{#if loggedIn}}
+  <script src="/script.js"></script>
 
 </html>
