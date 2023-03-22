@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 // router.post('/', withAuth, async(req, res) => {
@@ -13,7 +14,7 @@ const { Post } = require('../../models');
         } catch (error) {
             res.status(500).json(error)
         }
-    })
+    });
 
 // put request to update post
 router.put('/:id', withAuth, async (req, res) => {
