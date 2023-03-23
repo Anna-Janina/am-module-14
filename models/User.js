@@ -13,7 +13,7 @@ class User extends Model {
 User.init(
     {
         id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false, 
             primaryKey: true, 
             autoIncrement: true,
@@ -54,7 +54,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true, 
-        modelName: 'User'
+        modelName: 'user'
     },
 );
 
