@@ -5,56 +5,50 @@
 -
 - [Project Description](#project-description)
 - [How to Run](#how-to-run)
+- [Technologies used](#technologies-used)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Schema](#schema)
 - [Deployed link & Screenshot](#deployed-link--screenshot)
-- [References & Resources](#references--resources)
 
 
 **Project Description**
 -
-
- Our task was to create a real-world full-stack application that you’ll be able to showcase to potential employers.
-
-Welcome to Melbourne Hotel Reviews, a website that provides a platform for users to review and rate 5-star hotels in Melbourne, Australia.
-
-The website is designed to make it easy for users to share their experiences and opinions about the hotels they've stayed in, and to help other travelers make informed decisions when choosing a place to stay in Melbourne.
-
-Users can browse reviews and ratings from other users to get a sense of the quality and value of each hotel.
-
-Each hotel listing includes detailed information about the property, photos, and location. Users can leave a written review on each hotel.
-
-Overall, Melbourne Hotel Reviews is a valuable resource for anyone who is looking to book a 5-star hotel in Melbourne, and who wants to hear from other travelers about their experiences and recommendations.
+This project is a full-stack application using Model-View-Controller (MVC) paradigm and is deployed on Heroku. It is a tech blog website where users can post, added and delete a comment. Users can login safely into their account (username + password).
 
 **How to Run**
 -
+1. Clone the Repository on to your machine.
+2. Open the terminal and ensure you are in the right file path.
+3. Run the command npm install to download the packages.
+4. Log into my sequel and run the command source db/schema.sql to create the database.
+5. Run the command npm run seed to seed the database.
+6. Then run the command node start to run the software.
+7. The application will then begin to run locally.
 
-#### Prerequisites:
-- Node JS
-- MYSQL server
 
-#### Steps:
-
-1) Clone this repository to your machine by typing `git@github.com:Anna-Janina/Melbourne-Hotel-Hunter.git` on the terminal.
-2) Install all dependencies by typing `npm install`.
-3) Initialize SQL server by typing `mysql -u <username> -p<password>`.
-4) Go to .\db directory and run schema.sql `source schema.sql`.
-5) Change MySQL username and password in Connection.js file or .env file to match your credentials.
-6) Create a .env file in home directory and set the value of SESSION_KEY variable there.
-6) Seed the database by typing `node seeds\seed.js` in home directory.
-7) Run the application by typing `node server.js` in the terminal.
-
+**Technologies used:**
+-
+- dotenv
+- JavaScript
+- Nodejs
+- Expressjs
+- Sequelize
+- MYSQL2
+- Handlebarsjs
+- Heroku
 
 
 **User Story**
 -
-- AS a  
+- AS A developer who writes about tech
+I WANT a CMS-style blog site
+SO THAT I can publish articles, blog posts, and my thoughts and opinions 
 
 
 **Acceptance Criteria**
 -
-- GIVEN a CMS-style blog site
+GIVEN a CMS-style blog site
 WHEN I visit the site for the first time
 THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 WHEN I click on the homepage option
@@ -88,22 +82,7 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
-**Schema**
-- 
-
 
 **Deployed link & Screenshot**
 -
-- 
-
-
-
-
-
-
-**References & Resources**
--
-- https://www.google.com.au/
-- https://www.youtube.com/
--
-
+- https://git.heroku.com/tech-blog-am14.git
