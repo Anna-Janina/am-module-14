@@ -12,36 +12,18 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="..//../public/style.css" />
   </head>
   <body>
-    {{!-- Nav bar --}}
-    <nav>
-      <ul>
-        <h1>
-          <a href="/">The Tech Blog</a>
-        </h1>
-        <li><a href="/">Home</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        {{#if loggedIn}}
-        <li><a href="/logout" id="logout"></a></li>
-        {{else}}
-
-        <li><a href="/login" id="'login">login</a></li>
-        <li><a href="/signup" id="signup"></a></li>
-       </ul>
-    </nav>
-
-    <main>
+    
 
       {{{body}}}
 
-    </main>
-
+ 
   </body>
 
   
-  {{#if loggedIn}}
+ 
   <script src="/script.js"></script>
 
 </html>

@@ -23,6 +23,10 @@ Post.init(
                 len: [1],
             }
         },
+        date: {
+            type: DataTypes.DATE,
+            defaultValue:  DataTypes.NOW,
+            },
         userId: {
             type: DataTypes.INTEGER,
             references: {
