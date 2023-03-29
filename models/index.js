@@ -1,9 +1,9 @@
 const Comments = require('../models/Comment');
-const Posts = require('../models/Post');
+const Post = require('../models/Post');
 const User = require('../models/User');
 // const sequelize = require('../config/connection');
 
-Comments.belongsTo(Posts, {
+Comments.belongsTo(Post, {
     foreignKey: 'postId',
     onDelete: 'SET NULL'
 });
@@ -14,13 +14,13 @@ Comments.belongsTo(User, {
     onDelete: 'SET NULL'
 });
 
-Posts.hasMany(Comments, {
+Post.hasMany(Comments, {
     foreignKey: 'postId',
     onDelete: 'SET NULL'
 });
 
 //check
-Posts.belongsTo(User, {
+Post.belongsTo(User, {
     foreignKey: 'userId',
     onDelete: 'SET NULL'
 });
@@ -34,5 +34,5 @@ Posts.belongsTo(User, {
 //     foreignKey: 'userId',
 // });
 
-module.exports = { Comments, Posts, User };
+module.exports = { Comments, Post, User };
 
